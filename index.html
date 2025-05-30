@@ -18,4 +18,27 @@
     </div>
   </div>
 </body>
+  <script>
+  function downloadVideo() {
+    const url = document.getElementById("videoUrl").value.trim();
+    const platform = document.getElementById("platform").value;
+
+    if (!url) {
+      alert("Masukkan link videonya dulu!");
+      return;
+    }
+
+    let redirectUrl = "";
+
+    if (platform === "tiktok") {
+      redirectUrl = `https://snaptik.app/ID?url=${encodeURIComponent(url)}`;
+    } else if (platform === "instagram") {
+      redirectUrl = `https://snapinsta.app/id?url=${encodeURIComponent(url)}`;
+    } else if (platform === "youtube") {
+      redirectUrl = `https://en.savefrom.net/1-youtube-video-downloader-4/?url=${encodeURIComponent(url)}`;
+    }
+
+    window.open(redirectUrl, "_blank");
+  }
+</script>
 </html>
