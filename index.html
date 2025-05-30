@@ -1,92 +1,88 @@
-
-<!DOCTYPE html>
-<html lang="id">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rivalion Downloader</title>
+  <title>Rivalion Downloader Hub</title>
   <style>
     body {
       margin: 0;
-      padding: 0;
-      font-family: sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: url('bg.jpg') no-repeat center center fixed;
       background-size: cover;
       color: white;
       text-align: center;
-    }
+    }.container {
+  padding: 50px 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  max-width: 900px;
+  margin: auto;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.7);
+}
 
-    .container {
-      padding: 50px;
-      background: rgba(0, 0, 0, 0.6);
-      max-width: 600px;
-      margin: 100px auto;
-      border-radius: 20px;
-    }
+h1 {
+  font-size: 3rem;
+  margin-bottom: 30px;
+}
 
-    input, select, button {
-      padding: 12px;
-      margin: 10px 0;
-      width: 80%;
-      font-size: 16px;
-      border-radius: 8px;
-      border: none;
-    }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 15px;
+}
 
-    button {
-      background-color: #00cc66;
-      color: white;
-      cursor: pointer;
-      transition: 0.3s;
-    }
+.button {
+  padding: 15px;
+  background-color: #00bcd4;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
 
-    button:hover {
-      background-color: #00994d;
-    }
+.button:hover {
+  background-color: #008fa1;
+}
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+}
+
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Rivalion Video Downloader</h1>
-    <p>Masukkan link video TikTok, Instagram, atau YouTube:</p>
-
-    <input type="text" id="videoUrl" placeholder="Tempelkan link video di sini..." />
-
-    <br />
-
-    <select id="platform">
-      <option value="tiktok">TikTok</option>
-      <option value="instagram">Instagram</option>
-      <option value="youtube">YouTube</option>
-    </select>
-
-    <br />
-
-    <button onclick="downloadVideo()">Download</button>
+    <h1>Rivalion Downloader</h1>
+    <div class="grid">
+      <button class="button" onclick="window.open('https://snaptik.app')">TikTok</button>
+      <button class="button" onclick="window.open('https://snapinsta.app')">Instagram</button>
+      <button class="button" onclick="window.open('https://savefrom.net')">YouTube</button>
+      <button class="button" onclick="window.open('https://fdown.net')">Facebook</button>
+      <button class="button" onclick="window.open('https://ssstwitter.com')">Twitter / X</button>
+      <button class="button" onclick="window.open('https://pinterestvideodownloader.com')">Pinterest</button>
+      <button class="button" onclick="window.open('https://viddit.red')">Reddit</button>
+      <button class="button" onclick="window.open('https://expertsphp.com/linkedin-video-downloader.php')">LinkedIn</button>
+      <button class="button" onclick="window.open('https://vimeodownloader.com')">Vimeo</button>
+      <button class="button" onclick="window.open('https://snackvideo.download')">SnackVideo</button>
+      <button class="button" onclick="window.open('https://kwai-video-downloader.com')">Kwai</button>
+      <button class="button" onclick="window.open('https://www.y2mate.com')">Y2Mate</button>
+      <button class="button" onclick="window.open('https://ytmp3.cc')">YouTube MP3</button>
+      <button class="button" onclick="window.open('https://ytshorts.savetube.me')">YouTube Shorts</button>
+      <button class="button" onclick="window.open('https://soundcloudmp3.org')">SoundCloud</button>
+      <button class="button" onclick="window.open('https://spotifydown.com')">Spotify</button>
+      <button class="button" onclick="window.open('https://www.audiomack.com')">Audiomack</button>
+      <button class="button" onclick="window.open('https://bastionhub.com')">Bastion</button>
+      <button class="button" onclick="window.open('https://www.imdb.com/trailers')">IMDB Trailer</button>
+      <button class="button" onclick="window.open('https://dailymotionvideo.download')">Dailymotion</button>
+      <button class="button" onclick="window.open('https://twitchclipdownloader.com')">Twitch Clips</button>
+      <button class="button" onclick="window.open('https://bandcampdownloader.io')">Bandcamp</button>
+      <button class="button" onclick="window.open('https://music.apple.com')">Apple Music</button>
+      <button class="button" onclick="window.open('https://jiosaavndownloader.com')">JioSaavn</button>
+    </div>
   </div>
-
-  <script>
-    function downloadVideo() {
-      const url = document.getElementById("videoUrl").value.trim();
-      const platform = document.getElementById("platform").value;
-
-      if (!url) {
-        alert("Masukkan link videonya dulu!");
-        return;
-      }
-
-      let redirectUrl = "";
-
-      if (platform === "tiktok") {
-        redirectUrl = `https://snaptik.app/ID?url=${encodeURIComponent(url)}`;
-      } else if (platform === "instagram") {
-        redirectUrl = `https://snapinsta.app/id?url=${encodeURIComponent(url)}`;
-      } else if (platform === "youtube") {
-        redirectUrl = `https://en.savefrom.net/1-youtube-video-downloader-4/?url=${encodeURIComponent(url)}`;
-      }
-
-      window.open(redirectUrl, "_blank");
-    }
-  </script>
 </body>
 </html>
